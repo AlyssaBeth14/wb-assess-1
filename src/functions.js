@@ -23,6 +23,10 @@ function average(x, y) {
 //   => true
 function approximatelyEqual(x, y) {
   
+  if(Math.abs(x - y) < 0.001){
+    return true
+  } 
+ return false
 }
 
 // Given a first name and last name, return a full name in the format "FIRST LAST"
@@ -61,14 +65,22 @@ function censorVowels(string) {
 //   stickyCase('hello world');
 //   => 'hElLo wOrLd'
 function stickyCase(string) {
-    let chars = string.toLowerCase().split("");
-    for (let i = 0; i < chars.length; i++) {
-      chars[i] = chars[i].toUpperCase();
+    let words = string.split(/\s+/);
+    
+    for (let i = 0; i < words.length; i++) {
+      words[i] = replace(words[i]);
     }
-    return chars.join("");
+    
+    console.log(words.join(" "));
+    return words.join(" ");
   }
-
   
+  function replace(str) {
+    let first = true;
+    return str.replace(/./g, c => (first = !first) ? c.toLowerCase() : c.toUpperCase());
+  }
+//////IT RUNS IN REPL
+
 // Return the given string in leetspeak. Leetspeak is a modified version of
 // English where characters are replaced by numbers or symbols. For this
 // version of leetspeak, replace the following characters:
@@ -81,10 +93,18 @@ function stickyCase(string) {
 // Ex.:
 //   leetspeak('javascript');
 //   => 'j4v45cr1p7'
-function leetspeak(string) {
 
-  return
+function leetspeak(string) {
+ let leetCode = {a: "4", e: '3', i: '1', o: '0', s: '5', t: '7'}
+ let translatedStr = "";
+ for (i = 0; i < string.length; i++) {
+    translatedStr += leetCode[string.charAt(i).toUpperCase()];
+    }
+
+  return translatedStr;
 }
+      
+
 
 export {
   approximatelyEqual,

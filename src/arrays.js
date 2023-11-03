@@ -19,7 +19,9 @@ function greaterThanTen(numbers) {
 //   bWords(['banana', 'orange', 'apple', 'Bonobo', 'kiwi', 'pear']);
 //   => ['banana', 'Bonobo]
 function bWords(words) {
-  let bWords = [words.startsWith("b") && words.startWith("B")]
+  let bWords = arr.filter(callback("b", "B"[ 0 [words]]) 
+      // return element for newArray, if true
+  [thisArg]);
   return bWords
 }
 
@@ -49,9 +51,10 @@ return
 //   everyOtherItem(['a', 'b', 'c', 'd', 'e']);
 //   => ['a', 'c', 'e']
 function everyOtherItem(items) {
-
-
+  
+return everyOtherItem
 }
+
 
 // Given a list of words and a letter, return the indexes of the words that
 // start with that letter. You can assume that the words and letter will always
