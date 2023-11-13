@@ -34,7 +34,7 @@ function approximatelyEqual(x, y) {
 //   fullName('John', 'Doe');
 //   => 'John Doe'
 function fullName(firstName, lastName) {
-  let fullName = console.log(`${firstName} ${lastName}`)
+  let fullName = `${firstName} ${lastName}`
   return fullName
 }
 /////I TESTED THIS ONE IN REPL
@@ -45,7 +45,7 @@ function fullName(firstName, lastName) {
 //   generateSentence('Kay', 'coffee', 'the local cafe');
 //   => 'Kay was drinking coffee at the local cafe.'
 function generateSentence(person, beverage, location) {
-  let generateSentence = console.log(`${person} was drinking ${beverage} at ${location}.`)
+  let generateSentence = `${person} was drinking ${beverage} at ${location}.`
   return generateSentence
 }
 
